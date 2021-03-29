@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>css landing page</title>
+	<link rel="stylesheet"  href="fontawesome/css/all.css">
+	<link rel="stylesheet"  href="mdb/css/bootstrap.css">
+	<link rel="stylesheet"  href="mdb/css/mdb.css">
+<style>
+*{
+margin:0px;
+padding: 0px;
+}
+footer
+{
+	text-align: center;
+}
+
+#main-nav{
+background-color: black;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 50px;
+}
+#main-nav h1{
+color:white;
+}
+#art img
+{
+	margin-left: 400px;
+	width: 50%;
+	height: 50%
+}
+#main-nav #nav-items button:hover
+{
+background-color: orange;
+border-radius: 12px;
+box-shadow: 0 0 10px white;
+}
+#main-content{
+background-color:green;
+background-size: cover;
+height:100vh;
+color: white;
+}
+#main-section #art #fig
+{
+	width: 100%;
+	height: 100%;
+	margin-top: 100px;
+}
+footer
+{
+	padding: 30px;
+	background: linear-gradient(45deg,skyblue,yellow,orange,red);
+}
+#btn
+{
+	padding: 20px;
+	margin-left: 800px;
+	background-color: red;
+	color: white;
+}
+#header
+{
+	text-align: center;
+	background:linear-gradient(45deg,blue,red,yellow,orange);
+	padding: 30px;
+	font-size: 40px;
+}
+#header2
+{
+	text-align: center;
+	padding: 20px;
+	font-size: 30px;
+}
+button
+{
+	margin-right: 30px;
+	padding: 10px 15px;
+	background-color: silver;
+	border: 3px solid black;
+	border-radius: 0px 20px 0px 20px;
+}
+@media(max-width:850px)
+{
+#main-nav{
+flex-direction: column;
+}
+#nav-items{
+margin-top: 2px;
+margin-bottom: 50px;
+}
+}
+@media(min-width:500px) and(max-width: 720px)
+{
+#main-nav
+{
+flex-direction: column;
+}
+#nav-items button
+{
+margin: 0px;
+flex-direction: column;
+}
+}
+
+
+</style>
+</head>
+<body>
+<nav id="main-nav">
+<h1 id="header2">Jspiders</h1>
+<div id="nav-items">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">LOGIN</button>
+
+		<!--MODAL-->
+		<div class="modal" id="login" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content animated swing">
+					<div class="modal-header bg-secondary text-white text-center">
+						<h2>REGISTER HERE</h2>
+						<button class="close" data-dismiss="modal">
+							<i class="fa fa-window-close"></i>
+						</button>
+					</div>
+
+					<div class="modal-body bg-light">
+						<form>
+							<div class="form-group">
+								<input type="text" placeholder="Enter user-name" class="form-control">
+							</div>
+							<div class="form-group">
+								<input type="password" placeholder="Enter password" class="form-control">
+							</div>
+						</form>	
+					</div>
+
+					<div class="modal-footer bg-success text-white">
+						<input type="submit" class="btn btn-outline-white">
+						<button class="close btn btn-outline-white" data-dismiss="modal">close</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+<script src="mdb/js/jquery.js"></script>
+<script src="mdb/js/popper.js"></script>
+<script src="mdb/js/bootstrap.js"></script>
+<script src="mdb/js/mdb.js"></script>
+
+	<button class="btn btn-primary" data-toggle="modal" data-target="#signup">Sign Up</button>
+
+	<!--MODAL-->
+	<div class="modal" id="signup" tabindex="-1" >
+		<div class="modal-dialog modal-lg ">
+			<div class="modal-content animated swing">
+				<div class="modal-header bg-primary text-right text-white ">
+					<h2>Sign-up Here</h2>
+					<button class="close" data-dismiss="modal" >
+						<i class="fa fa-window-close"></i>
+					</button>
+				</div>
+				<div class="modal-body bg-dark text-primary">
+					<form>
+						<div class="form-group">
+						<input type="text" placeholder="Enter your First-Name :" class="form-control">
+						</div>
+						<div class="form-group">
+						<input type="text" placeholder="Enter your last-Name :" class="form-control">
+						</div>
+						<div class="form-group">
+						<input type="number" placeholder="Enter your personal number :" class="form-control">
+						</div>
+						<div class="form-group">
+						<input type="email" placeholder="Enter your email i'd :" class="form-control">
+						</div>
+						<div class="form-group">
+							<textarea class="form-control">Enter your Address :</textarea>
+						</div>
+						<div class="form-group">
+						<input type="password" placeholder="Create your password :" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="radio" name="r1" placeholder="Enter your gender">Male
+							<input type="radio" name="r1" placeholder="Enter your gender">FeMale
+							<input type="radio" name="r1" placeholder="Enter your gender">Other			
+						</div>
+						<div>
+							<input type="checkbox" >
+							all the details that i have provided here is right and with my own knowledge...
+						</div>
+						<div>
+						 <button type="submit" class="btn btn-success btn-block">Login</button>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer bg-primary text-white">	
+				<button class="close" class="btn btn-outline-danger" data-dismiss="modal">close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</nav>
+<div id="main-content">
+	<section id="main-section">
+		<article id="art">
+			<h1 id="header">BS-MODAL</h1>
+			<figure id="fig">
+				<img src="fbimage.jpg">
+			</figure>	
+		</article>
+	</section>
+</div>
+<div >
+	<footer>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact-us" >Contact-Us</button>
+
+		<!--MODAL-->
+		<div class="modal" id="contact-us" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content animated swing">
+					<div class="modal-header bg-secondary text-white text-center">
+						<h2>Contact-Us</h2>
+						<button class="close" data-dismiss="modal">
+							<i class="fa fa-window-close"></i>
+						</button>
+					</div>
+
+					<div class="modal-body bg-light">
+						<form>
+							<div class="form-group">
+								Contact-Us here !<input type="number" placeholder="7683855088" class="form-control disabled">
+							</div>
+							<div class="form-group">
+								Mail us through this i'd !!<input type="email" placeholder="Varsha22@gmail.com" class="form-control disabled">
+							</div>
+						</form>	
+					</div>
+
+					<div class="modal-footer bg-success text-white">
+						<button class="close btn btn-outline-white" data-dismiss="modal">close</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+</body>
+</html>
+
